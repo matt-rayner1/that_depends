@@ -11,19 +11,20 @@ Note: some 404s on package version lookup so just use it as a cursory glance.
 # Configuration
 Pre-run config should be configured in `config.py`:
 
-## PACKAGE_SYSTEM 
-choice of GO, RUBYGEMS, NPM, CARGO, MAVEN, PYPI, NUGET
+`PACKAGE_SYSTEM`
+choice of `GO, RUBYGEMS, NPM, CARGO, MAVEN, PYPI, NUGET`
+
 e.g. `PACKAGE_SYSTEM = "PYPI"`
 
-## TARGET_PACKAGE 
+`TARGET_PACKAGE`
 the target package name, (i.e. the package to check against in your `CHECK_LIST` config)
 e.g. `TARGET_PACKAGE = "litellm"`
 
-## TARGET_VERSION
+`TARGET_VERSION`
 the target package's version no. 
 e.g. `TARGET_VERSION = "1.82.8"`
 
-## CHECK_LIST
+`CHECK_LIST`
 the list of packages (dependencies) to check against, for the given target.
 NOTE: items must be in form `<package>` or `<package>==<version>` to work.
 ```python
@@ -46,14 +47,10 @@ Then just run
 and look at `./logs/`
 
 # Logs 
-## run_output 
-general info for each package
-## clean
-packages that did not have target as a dependency 
-## violations 
-packages that did contain the target as part of its dependencies
-## errors
-packages that were unable to complete
+`run_output.log`: general info for each package
+`clean.log`: packages that did not have target as a dependency 
+`violations.log`: packages that did contain the target as part of its dependencies
+`errors.log`: packages that were unable to complete
 
 ## Could not fetch deps error
 Probs means that deps.dev doesnt have that module recorded or something, usually a 404 for that package
