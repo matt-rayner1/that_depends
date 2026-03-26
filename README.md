@@ -11,22 +11,27 @@ Note: some 404s on package version lookup so just use it as a cursory glance.
 # Configuration
 Pre-run config should be configured in `config.py`:
 
-`PACKAGE_SYSTEM`
-choice of `GO, RUBYGEMS, NPM, CARGO, MAVEN, PYPI, NUGET`
+`PACKAGE_SYSTEM`: choice of `GO, RUBYGEMS, NPM, CARGO, MAVEN, PYPI, NUGET`
 
 e.g. `PACKAGE_SYSTEM = "PYPI"`
 
-`TARGET_PACKAGE`
-the target package name, (i.e. the package to check against in your `CHECK_LIST` config)
+---
+
+`TARGET_PACKAGE`: the target package name, (i.e. the package to check against in your `CHECK_LIST` config)
+
 e.g. `TARGET_PACKAGE = "litellm"`
 
-`TARGET_VERSION`
-the target package's version no. 
+---
+
+`TARGET_VERSION`: the target package's version no. 
+
 e.g. `TARGET_VERSION = "1.82.8"`
 
-`CHECK_LIST`
-the list of packages (dependencies) to check against, for the given target.
+---
+
+`CHECK_LIST`: the list of packages (dependencies) to check against, for the given target.
 NOTE: items must be in form `<package>` or `<package>==<version>` to work.
+
 ```python
 CHECK_LIST = [
     "<package>==<version>",
@@ -35,8 +40,7 @@ CHECK_LIST = [
 ]
 ```
 
-## MAX_CONCURRENT_REQUESTS
-Maximum allowed concurrent http requests.
+`MAX_CONCURRENT_REQUESTS`: Maximum allowed concurrent http requests.
 NOTE: keep this low, otherwise it stresses the api server. 
 `MAX_CONCURRENT_REQUESTS = 5`
 
