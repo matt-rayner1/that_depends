@@ -42,6 +42,8 @@ CHECK_LIST = [
 ]
 ```
 
+---
+
 `MAX_CONCURRENT_REQUESTS`: Maximum allowed concurrent http requests.
 NOTE: keep this low, otherwise it stresses the api server. 
 `MAX_CONCURRENT_REQUESTS = 5`
