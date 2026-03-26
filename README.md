@@ -32,6 +32,8 @@ e.g. `TARGET_VERSION = "1.82.8"`
 `CHECK_LIST`: the list of packages (dependencies) to check against, for the given target.
 NOTE: items must be in form `<package>` or `<package>==<version>` to work.
 
+---
+
 ```python
 CHECK_LIST = [
     "<package>==<version>",
