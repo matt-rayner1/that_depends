@@ -56,8 +56,11 @@ and look at `./logs/`
 
 # Logs 
 `run_output.log`: general info for each package
+
 `clean.log`: packages that did not have target as a dependency 
+
 `violations.log`: packages that did contain the target as part of its dependencies
+
 `errors.log`: packages that were unable to complete
 
 ## Could not fetch deps error
